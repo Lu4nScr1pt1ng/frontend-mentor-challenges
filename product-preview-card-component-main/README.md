@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontendmentor](https://www.frontendmentor.io/solutions/product-preview-card-components-responsive-with-flexbox-zC5-h4RdJ9)
+- Live Site URL: [Vercel live](https://product-preview-card-component-main-liard.vercel.app)
 
 ## My process
 
