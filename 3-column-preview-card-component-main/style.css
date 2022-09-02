@@ -1,0 +1,167 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+
+    /* Fonts */
+    --ff-big-shoulders-700: 'Big Shoulders Display', cursive;
+    --ff-lexend-deca-400: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: var(--very-light-gray);
+    font-size: 16px;
+    font-family: var(--ff-lexend-deca-400);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+h1, p{
+    color: var(--very-light-gray);
+}
+
+h1 {
+    font-family: var(--ff-big-shoulders-700);
+}
+
+.card-box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-content: stretch;
+    height: 100%;
+    margin: 1.5rem;
+    max-width: 57.75rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 4px 4px 20px 2px rgba(0,0,0,0.33);
+
+}
+
+.card-container {
+    height: 100%;
+    padding: 3rem;
+}
+
+.card-icon {
+    transform: scale(0.9);
+    margin-left: -0.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.first-card {
+    background-color: var(--bright-orange);
+}
+
+.first-card button {
+    color: var(--bright-orange);;
+}
+
+.second-card {
+    background-color: var(--dark-cyan);
+}
+
+.second-card button {
+    color: var(--dark-cyan);;
+}
+
+.third-card {
+    background-color: var(--very-dark-cyan);
+}
+
+.third-card button {
+    color: var(--very-dark-cyan);;
+}
+
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+button {
+    background-color: var(--very-light-gray);
+    padding: 0.8rem 1.8rem;
+    border-radius: 3rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--very-light-gray);
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0);
+
+    color: var(--very-light-gray);
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 695px) {
+    .card-box-container {
+        display: flex;
+        flex-direction: column;        
+    }
+}
