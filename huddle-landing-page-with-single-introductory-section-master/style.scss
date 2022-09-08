@@ -1,0 +1,267 @@
+/* Google fonts */
+
+
+/* Variables */
+
+/* Fonts & typography */
+
+$f-primary: 'Poppins', sans-serif;
+$base-font-size: 1.8rem;
+$base-line-height: $base-font-size * 1.5;
+
+$fw-regular: 400;
+$fw-semibold: 600;
+
+/* colros */
+
+$c-body: hsl(257, 40%, 49%);
+$c-white: hsl(0, 0%, 100%);
+$c-soft-magenta: hsl(300, 69%, 71%);
+
+
+//breakpoints mixin
+
+@mixin breakpoint($breakpoint)  {
+    @if $breakpoint == tablet {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @if $breakpoint == laptop {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+    @if $breakpoint == desktop {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+    @if $breakpoint == project {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+/* base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; // 10px
+}
+
+body {
+    font-family: $f-primary;
+    color: $c-white;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    background: url('./images/bg-mobile.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: $c-body;
+    @include breakpoint(laptop) {
+        background: url('./images/bg-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        background-color: $c-body;
+
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: $c-white;
+    font-weight: $fw-semibold;
+    margin-bottom: 1.2rem;
+}
+
+h1 {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    @include breakpoint(desktop) {
+        font-size: 3.4rem;
+    }
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+
+/* reusable classes */
+.container {
+    width: 100%;
+    max-width: 1320px;
+    padding: 0 3.6rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.btn {
+    background-color: $c-white;
+    width: 70%;
+    margin: auto;
+    padding: 0.8rem 0.8rem;
+    display: flex;
+    border-radius: 6rem;
+    justify-content: center;
+    text-align: center;
+    color: $c-body;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        background-color: $c-soft-magenta;
+        color: $c-white;
+    }
+}
+
+/* header */
+.header {
+    padding: 3rem 0 0 0;
+    width: 100%;
+    &__container {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__logo {
+        display: flex;
+        background-color: transparent;
+        img {
+            width: 12.6rem;
+        }
+        @include breakpoint(tablet) {
+            img {
+                width: 21rem;
+            }
+        }
+    }
+    @include breakpoint(laptop) {
+        padding: 6rem 0 0 0;
+    }
+}
+
+/*hero styles */
+
+.hero {
+    padding: 6.4rem 0 0rem 0;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    &__right {
+        padding-top: 6rem;
+        a {
+            font-size: 1.4rem;
+            margin-top: 2.4rem;
+        }
+    }
+    &__description {
+        font-size: 1.6rem;
+        margin: auto;
+        width: 95%;
+    }
+    @include breakpoint(laptop) {
+        &__container {
+            flex-direction: row;
+            gap: 4rem;
+        }
+        &__left {
+            width: 124rem;
+        }
+        &__right {
+            padding-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+        }
+        &__description {
+            width: 100%;
+        }
+        .btn {
+            margin: 0;
+            width: 35%;
+            font-size: 1.8rem;
+        }
+    }
+    @include breakpoint(desktop) {
+        &__container {
+            padding-top: 1.5rem;
+        }
+        &__left {
+            width: 162rem;
+        }
+        &__right {
+            width: 100%;
+            h1 {
+                width: 95%;
+                font-size: 4rem;
+                line-height: 1.7;
+            }
+            .btn {
+                width: 38%;
+                margin-top: 2rem;
+                padding: 1.5rem;
+            }
+        }
+        &__description {
+            width: 100%;
+            margin: 0;
+            font-size: 1.9rem;
+        }
+    }
+}
+
+.social {
+    padding-top: 4rem;
+    padding-bottom: 3.4rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    &__link {
+        width: 2.8rem;
+        height: 2.8rem;
+        color: $c-white;
+        border: 1px solid $c-white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: $c-soft-magenta;
+            border-color: $c-soft-magenta;
+        }
+    }
+    @include breakpoint(laptop) {
+        padding-top: 10rem;
+        justify-content: end;
+        gap: 1rem;
+    }
+    @include breakpoint(desktop) {
+        padding-top: 16rem;
+        justify-content: end;
+        gap: 1.5rem;
+    }
+    &__link {
+        width: 4rem;
+        height: 4rem;
+    }
+
+}

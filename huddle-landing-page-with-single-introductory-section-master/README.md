@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-huddle-landing-page-QV9TSRNjw6)
+- Live Site URL: [Add live site URL here](https://huddle-landing-page-challenge-done.vercel.app)
 
 ## My process
 
